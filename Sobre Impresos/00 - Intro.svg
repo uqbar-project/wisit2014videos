@@ -82,7 +82,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49635417"
-     inkscape:cx="960"
+     inkscape:cx="689.02414"
      inkscape:cy="528.93092"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -108,7 +108,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Logo"
-     style="display:inline">
+     style="display:none">
     <g
        style="display:inline"
        transform="matrix(0.49964243,0,0,0.49964243,1563.3861,-269.80708)"
@@ -323,6 +323,6 @@
          id="tspan6695"
          x="545.27631"
          y="974.75751"
-         style="font-size:56.41851807px">Nicolás Scarcella</tspan></text>
+         style="font-size:56.41851807px">Nicolás Scarcella - Uqbar Project</tspan></text>
   </g>
 </svg>
