@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt title="Anonymous Submission" version="0.9.3" root="/home/pablo" LC_NUMERIC="es_AR.UTF-8">
+<mlt title="Anonymous Submission" version="0.9.3" root="/home/pablo/dev/videos/WISIT2014/00 - Intro" LC_NUMERIC="es_AR.UTF-8">
  <profile width="1920" display_aspect_den="9" colorspace="709" frame_rate_den="1" description="HD 1080i 25 fps" height="1080" display_aspect_num="16" frame_rate_num="25" progressive="0" sample_aspect_num="1" sample_aspect_den="1"/>
  <producer in="0" out="25342" id="black">
   <property name="mlt_type">producer</property>
@@ -17,7 +17,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">21913</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/00 - Intro/Intro.ogg</property>
+  <property name="resource">Intro.ogg</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">audio</property>
   <property name="meta.media.0.codec.sample_fmt">fltp</property>
@@ -43,7 +43,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">23736</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Fondo.png</property>
+  <property name="resource">/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Fondo.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -60,7 +60,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">21396</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/00 - Intro/Intro_screen.mp4</property>
+  <property name="resource">Intro_screen.mp4</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">59,8333</property>
@@ -119,7 +119,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">22923</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/00 - Intro/00 - Intro.MP4</property>
+  <property name="resource">00 - Intro.MP4</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">29,97</property>
@@ -186,7 +186,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">22625</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Bordes.png</property>
+  <property name="resource">/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Bordes.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -204,7 +204,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">22854</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/Sobre Impresos/00 - Intro.png</property>
+  <property name="resource">/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -222,7 +222,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">22853</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/Sobre Impresos/logo uqbar.png</property>
+  <property name="resource">/home/pablo/dev/videos/WISIT2014/Sobre Impresos/logo uqbar.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -234,13 +234,13 @@
  </producer>
  <playlist id="playlist7">
   <blank length="125"/>
-  <entry in="0" out="22852" producer="7"/>
+  <entry in="0" out="1749" producer="7"/>
  </playlist>
  <producer in="0" out="137" id="9">
   <property name="mlt_type">producer</property>
   <property name="length">138</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Titulo.png</property>
+  <property name="resource">/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Titulo.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -254,7 +254,7 @@
   <property name="mlt_type">producer</property>
   <property name="length">125</property>
   <property name="eof">pause</property>
-  <property name="resource">dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Final.png</property>
+  <property name="resource">/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Final.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -457,7 +457,7 @@
    <property name="softness">0</property>
    <property name="luma"/>
   </transition>
-  <transition in="125" out="22978" id="transition13">
+  <transition in="125" out="1874" id="transition13">
    <property name="a_track">0</property>
    <property name="b_track">8</property>
    <property name="start">0/0:100%x100%</property>
@@ -472,10 +472,11 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0%/0%:100%x100%:100</property>
+   <property name="geometry">0/0:1920x1080:100;1585=0/0:1920x1080:100;1684=0/0:1920x1080:0</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
+   <property name="luma"/>
   </transition>
   <transition out="137" id="transition14">
    <property name="a_track">0</property>
@@ -522,7 +523,7 @@
  </tractor>
  <kdenlivedoc profile="atsc_1080i_50" kdenliveversion="0.9.10" version="0,88" projectfolder="/home/pablo/dev/videos/WISIT2014/00 - Intro">
   <customeffects/>
-  <documentproperties documentid="1417561494904" renderaudiobitrate="160" renderdestination="" renderrescalewidth="320" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="H.264/AAC (CBR)" renderrescaleheight="240" zonein="744" renderrescale="0" renderscanning="0" renderurl="/home/pablo/dev/videos/WISIT2014/00 - Intro/untitled.mp4" rendertwopass="0" renderplay="0" position="23089" proxyminsize="1000" renderstartguide="-1" zoom="10" rendercategory="MP4" renderratio="0" zoneout="4011" renderbitrate="4000" renderzone="0" renderendguide="-1" renderexportaudio="0" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -vcodec mpeg2video -g 5 -s 640x480 -qscale 7" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
+  <documentproperties documentid="1417561494904" renderaudiobitrate="160" renderdestination="" renderrescalewidth="320" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="H.264/AAC (CBR)" renderrescaleheight="240" zonein="744" renderrescale="0" renderscanning="0" renderurl="/home/pablo/dev/videos/WISIT2014/00 - Intro/untitled.mp4" rendertwopass="1" renderplay="0" position="2124" proxyminsize="1000" renderstartguide="-1" zoom="10" rendercategory="MP4" renderratio="0" zoneout="4011" renderbitrate="4000" renderzone="0" renderendguide="-1" renderexportaudio="0" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -vcodec mpeg2video -g 5 -s 640x480 -qscale 7" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
   <documentmetadata/>
   <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
@@ -581,11 +582,11 @@ p, li { white-space: pre-wrap; }
    <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
   </kdenlive_producer>
   <kdenlive_producer duration="125" frame_size="6400x3600" thumbnail="100" in="0" analysisdata="" file_size="131772" aspect_ratio="1" out="124" file_hash="66eeed512db434c87905780a144edc23" type="5" id="7" name="logo uqbar.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/logo uqbar.png"/>
-  <kdenlive_producer duration="125" frame_size="6400x3600" in="0" analysisdata="" file_size="152770" aspect_ratio="1" out="124" type="5" id="8" name="00 - Intro.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro.png"/>
+  <kdenlive_producer duration="125" frame_size="6400x3600" in="0" analysisdata="" file_size="170489" aspect_ratio="1" out="124" file_hash="15df73c5dc7af24775ef36d42da3bdd5" type="5" id="8" name="00 - Intro.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro.png"/>
   <kdenlive_producer duration="125" frame_size="6400x3600" in="0" analysisdata="" file_size="1709317" aspect_ratio="1" out="124" file_hash="cabd630cf45df506cdb3679430eed917" type="5" id="9" name="00 - Intro - Titulo.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Titulo.png"/>
   <kdenlive_producer duration="125" frame_size="6400x3600" in="0" analysisdata="" file_size="1756950" aspect_ratio="1" out="124" file_hash="890760de12818a5a695649a9514923ff" type="5" id="10" name="00 - Intro - Final.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Final.png"/>
   <kdenlive_producer duration="125" frame_size="6400x3600" in="0" analysisdata="" file_size="984626" aspect_ratio="1" out="124" file_hash="0c828adaf847b531cedb3bfbfc7c4aed" type="5" id="11" name="00 - Intro - Fondo.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Fondo.png"/>
-  <kdenlive_producer duration="125" frame_size="6400x3600" thumbnail="100" in="0" analysisdata="" file_size="98655" aspect_ratio="1" out="124" file_hash="0f654f56306d0451c7426ef3d789a563" type="5" id="12" name="00 - Intro - Bordes.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Bordes.png"/>
+  <kdenlive_producer duration="125" frame_size="6400x3600" thumbnail="100" in="0" analysisdata="" file_size="98655" aspect_ratio="1" out="124" type="5" id="12" name="00 - Intro - Bordes.png" resource="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro - Bordes.png"/>
   <markers/>
   <groups/>
  </kdenlivedoc>
