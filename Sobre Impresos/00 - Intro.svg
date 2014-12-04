@@ -82,15 +82,15 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49635417"
-     inkscape:cx="689.02414"
-     inkscape:cy="528.93092"
+     inkscape:cx="824.13063"
+     inkscape:cy="315.85508"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="744"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="850"
+     inkscape:window-x="-8"
+     inkscape:window-y="26"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata3016">
@@ -100,7 +100,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -121,7 +121,7 @@
          sodipodi:cy="327.14261"
          sodipodi:rx="48.094841"
          sodipodi:ry="48.094841"
-         d="m 329.06997,327.14261 a 48.094841,48.094841 0 1 1 -0.008,-0.89491"
+         d="m 329.06997,327.14261 c 0,26.56205 -21.53279,48.09484 -48.09484,48.09484 -26.56205,0 -48.09484,-21.53279 -48.09484,-48.09484 0,-26.56205 21.53279,-48.09484 48.09484,-48.09484 26.21321,0 47.59876,20.99126 48.08651,47.19993"
          sodipodi:start="0"
          sodipodi:end="6.2645771"
          sodipodi:open="true"
@@ -196,7 +196,7 @@
      inkscape:label="Nombre"
      style="display:inline">
     <rect
-       style="opacity:0.85;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
+       style="opacity:0.84999999999999998;fill:#0707ff;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
        id="rect6594"
        width="1763.3334"
        height="176.33331"
@@ -204,7 +204,7 @@
        y="872.34521"
        ry="79.84906" />
     <rect
-       style="opacity:0.85;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
+       style="opacity:0.84999999999999998;fill:#9b9bff;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
        id="rect6594-9"
        width="1739.7632"
        height="173.97629"
@@ -212,7 +212,7 @@
        y="873.52374"
        ry="78.781731" />
     <rect
-       style="opacity:0.85;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
+       style="opacity:0.84999999999999998;fill:#9090ff;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
        id="rect6594-9-3"
        width="1473.0964"
        height="147.30962"
@@ -220,7 +220,7 @@
        y="886.85706"
        ry="66.706253" />
     <g
-       transform="matrix(0.12704341,0,0,0.12704341,-50.365088,1869.688)"
+       transform="matrix(0.12704341,0,0,0.12704341,-16.365088,1869.688)"
        style="display:inline"
        id="g26450">
       <g
