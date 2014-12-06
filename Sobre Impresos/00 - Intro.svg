@@ -15,9 +15,9 @@
    id="svg3011"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   inkscape:export-filename="/home/pablo/dev/videos/WISIT2014/Sobre Impresos/00 - Intro.png"
-   inkscape:export-xdpi="300"
-   inkscape:export-ydpi="300"
+   inkscape:export-filename="/media/pablitar/Datos/WISIT2014/Sobre Impresos/04 - Pilas.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
    sodipodi:docname="00 - Intro.svg">
   <defs
      id="defs3013">
@@ -76,14 +76,14 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#00ff00"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49635417"
-     inkscape:cx="824.13063"
-     inkscape:cy="315.85508"
+     inkscape:zoom="0.3509754"
+     inkscape:cx="1497.632"
+     inkscape:cy="493.71822"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -100,7 +100,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -314,15 +314,15 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:43.39886093px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+       style="font-size:43.39886093px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#303030;fill-opacity:1;stroke:none;display:inline;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
        x="545.27631"
-       y="974.75751"
+       y="978.75751"
        id="text6693"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan6695"
          x="545.27631"
-         y="974.75751"
-         style="font-size:56.41851807px">Nicolás Scarcella - Uqbar Project</tspan></text>
+         y="978.75751"
+         style="font-size:56.41851807px;fill:#303030;fill-opacity:1"
+         id="tspan3030">Hugo Ruscitti - Pilas</tspan></text>
   </g>
 </svg>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mlt title="Anonymous Submission" version="0.9.3" root="/media/pablitar/Datos/WISIT2014/04 - Pilas" LC_NUMERIC="en_US.UTF-8">
  <profile width="1280" display_aspect_den="9" colorspace="709" frame_rate_den="1" description="HD 720p 30 fps" height="720" display_aspect_num="16" frame_rate_num="30" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
- <producer in="0" out="83468" id="black">
+ <producer in="0" out="84128" id="black">
   <property name="mlt_type">producer</property>
-  <property name="length">83469</property>
+  <property name="length">84129</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/pablitar/black</property>
+  <property name="resource">black</property>
   <property name="aspect_ratio">0</property>
   <property name="mlt_service">colour</property>
  </producer>
@@ -13,9 +13,9 @@
   <entry in="0" out="83468" producer="black"/>
  </playlist>
  <playlist id="playlist1"/>
- <producer in="0" out="83468" id="14_3">
+ <producer in="0" out="83469" id="14_5">
   <property name="mlt_type">producer</property>
-  <property name="length">83469</property>
+  <property name="length">83470</property>
   <property name="eof">pause</property>
   <property name="resource">Pilas.ogg</property>
   <property name="meta.media.nb_streams">1</property>
@@ -34,8 +34,9 @@
   <property name="mlt_service">avformat</property>
  </producer>
  <playlist id="playlist2">
-  <entry in="0" out="83468" producer="14_3">
-   <filter out="75" id="fadein">
+  <blank length="343"/>
+  <entry in="343" out="83468" producer="14_5">
+   <filter in="343" out="418" id="fadein">
     <property name="track">0</property>
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
@@ -49,10 +50,9 @@
    </filter>
   </entry>
  </playlist>
- <playlist id="playlist3"/>
- <producer in="0" out="82519" id="15_1">
+ <producer in="0" out="82466" id="15_4">
   <property name="mlt_type">producer</property>
-  <property name="length">82520</property>
+  <property name="length">82467</property>
   <property name="eof">pause</property>
   <property name="resource">Pilas_screen.mp4</property>
   <property name="meta.media.nb_streams">2</property>
@@ -90,14 +90,14 @@
   <property name="meta.media.frame_rate_num">359</property>
   <property name="meta.media.frame_rate_den">6</property>
   <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
   <property name="meta.media.width">1280</property>
   <property name="meta.media.height">720</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
-  <property name="meta.media.color_trc">2</property>
  </producer>
- <playlist id="playlist4">
-  <entry in="159" out="82464" producer="15_1">
+ <playlist id="playlist3">
+  <entry in="159" out="82464" producer="15_4">
    <filter in="159" id="volume">
     <property name="track">0</property>
     <property name="window">75</property>
@@ -122,7 +122,7 @@
    </filter>
   </entry>
  </playlist>
- <producer in="0" out="82221" id="1">
+ <producer in="0" out="82221" id="1_3">
   <property name="mlt_type">producer</property>
   <property name="length">82222</property>
   <property name="eof">pause</property>
@@ -165,16 +165,16 @@
   <property name="meta.media.frame_rate_num">30000</property>
   <property name="meta.media.frame_rate_den">1001</property>
   <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">11</property>
   <property name="meta.media.width">1280</property>
   <property name="meta.media.height">720</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
-  <property name="meta.media.color_trc">11</property>
  </producer>
- <playlist id="playlist5">
-  <blank length="305"/>
-  <entry in="0" out="82221" producer="1">
-   <filter out="82221" id="filter1">
+ <playlist id="playlist4">
+  <blank length="306"/>
+  <entry in="0" out="82221" producer="1_3">
+   <filter out="46" id="filter0">
     <property name="track">0</property>
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
@@ -183,11 +183,290 @@
     <property name="kdenlive_id">volume</property>
     <property name="tag">volume</property>
     <property name="kdenlive_ix">1</property>
-    <property name="kdenlive_info">1/-1/</property>
-    <property name="gain">0.05</property>
-    <property name="end">0.05</property>
+    <property name="kdenlive_info">0/-1/</property>
+    <property name="gain">0</property>
+    <property name="end">0</property>
+   </filter>
+   <filter in="46" out="103" id="filter1">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info">0/-1/</property>
+    <property name="gain">0</property>
+    <property name="end">0.03</property>
+   </filter>
+   <filter in="103" out="82221" id="filter2">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info">0/-1/</property>
+    <property name="gain">0.03</property>
+    <property name="end">0.03</property>
    </filter>
   </entry>
+ </playlist>
+ <producer in="0" out="82222" id="17">
+  <property name="mlt_type">producer</property>
+  <property name="length">82223</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/Sobre Impresos/logo-uqbar-semitransparente.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <playlist id="playlist5">
+  <blank length="305"/>
+  <entry in="0" out="82221" producer="17"/>
+ </playlist>
+ <producer in="0" out="1137" id="18">
+  <property name="mlt_type">producer</property>
+  <property name="length">1138</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/Sobre Impresos/04 - Pilas.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <producer in="0" out="604" id="6_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">605</property>
+  <property name="eof">pause</property>
+  <property name="resource">MAH04219.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6023317</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-28 14:19:35</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127434</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-28 14:19:35</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-28 14:19:35</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="474" id="8_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">475</property>
+  <property name="eof">pause</property>
+  <property name="resource">MAH04221.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6037618</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-28 14:26:20</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127279</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-28 14:26:20</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-28 14:26:20</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="1194" id="10_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">1195</property>
+  <property name="eof">pause</property>
+  <property name="resource">MAH04223.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6021887</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-28 14:35:40</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127690</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-28 14:35:40</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-28 14:35:40</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="2346" id="11_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">2347</property>
+  <property name="eof">pause</property>
+  <property name="resource">MAH04224.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6007251</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-28 14:40:11</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127824</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-28 14:40:11</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-28 14:40:11</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <playlist id="playlist0">
+  <blank length="751"/>
+  <entry in="0" out="400" producer="18"/>
+  <blank length="21626"/>
+  <entry in="0" out="604" producer="6_1"/>
+  <blank length="11509"/>
+  <entry in="0" out="474" producer="8_1"/>
+  <blank length="16358"/>
+  <entry in="0" out="1194" producer="10_1"/>
+  <blank length="6915"/>
+  <entry in="0" out="2346" producer="11_1"/>
+ </playlist>
+ <producer in="0" out="411" id="16">
+  <property name="mlt_type">producer</property>
+  <property name="length">412</property>
+  <property name="eof">pause</property>
+  <property name="resource">videoTitle.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">960</property>
+  <property name="meta.media.height">540</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <playlist id="playlist6">
+  <entry in="0" out="411" producer="16"/>
  </playlist>
  <tractor title="Anonymous Submission" global_feed="1" in="0" out="83468" id="maintractor">
   <property name="meta.volume">1</property>
@@ -197,6 +476,8 @@
   <track producer="playlist3"/>
   <track producer="playlist4"/>
   <track producer="playlist5"/>
+  <track hide="audio" producer="playlist0"/>
+  <track producer="playlist6"/>
   <transition id="transition0">
    <property name="a_track">1</property>
    <property name="b_track">2</property>
@@ -233,9 +514,48 @@
    <property name="combine">1</property>
    <property name="internal_added">237</property>
   </transition>
-  <transition in="2045" out="2456" id="transition4">
-   <property name="a_track">3</property>
-   <property name="b_track">5</property>
+  <transition id="transition4">
+   <property name="a_track">1</property>
+   <property name="b_track">6</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="internal_added">237</property>
+   <property name="combine">1</property>
+  </transition>
+  <transition id="transition5">
+   <property name="a_track">1</property>
+   <property name="b_track">7</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="internal_added">237</property>
+   <property name="combine">1</property>
+  </transition>
+  <transition in="751" out="1151" id="transition6">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;60=0/0:1280x720:100;357=0/0:1280x720:100;400=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="305" out="411" id="transition7">
+   <property name="a_track">5</property>
+   <property name="b_track">7</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -245,6 +565,216 @@
    <property name="automatic">1</property>
    <property name="kdenlive_id">composite</property>
    <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;106=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="305" out="82526" id="transition8">
+   <property name="a_track">4</property>
+   <property name="b_track">5</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0%/0%:100%x100%:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="34892" out="35366" id="transition9">
+   <property name="a_track">4</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;60=0/0:1280x720:100;414=0/0:1280x720:100;474=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="51725" out="52919" id="transition10">
+   <property name="a_track">4</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;60=0/0:1280x720:100;1138=0/0:1280x720:100;1194=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="59835" out="62181" id="transition11">
+   <property name="a_track">4</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;60=0/0:1280x720:100;451=0/0:1280x720:100;514=0/0:1280x720:0;1317=0/0:1280x720:0;1371=0/0:1280x720:100;1534=0/0:1280x720:100;1583=0/0:1280x720:0;2346=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="3102" out="4948" id="transition12">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1786=0/0:1280x720:0;1846=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="5324" out="5771" id="transition13">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;387=0/0:1280x720:0;447=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="6314" out="6951" id="transition14">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;577=0/0:1280x720:0;637=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="7429" out="9377" id="transition15">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1898=0/0:1280x720:0;1948=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="9707" out="11579" id="transition16">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1824=0/0:1280x720:0;1872=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="2083" out="2494" id="transition17">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
@@ -254,9 +784,29 @@
    <property name="softness">0</property>
    <property name="luma"/>
   </transition>
-  <transition in="3094" out="5471" id="transition5">
+  <transition in="1106" out="1517" id="transition18">
    <property name="a_track">3</property>
-   <property name="b_track">5</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;34=0/0:1280x720:0;347=0/0:1280x720:0;411=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+  </transition>
+  <transition in="11985" out="13015" id="transition19">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -269,15 +819,15 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;2332=0/0:1280x720:0;2377=0/0:1280x720:100</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;989=0/0:1280x720:0;1030=0/0:1280x720:100</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
    <property name="luma"/>
   </transition>
-  <transition in="6269" out="8646" id="transition6">
+  <transition in="13523" out="14209" id="transition20">
    <property name="a_track">3</property>
-   <property name="b_track">5</property>
+   <property name="b_track">4</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -290,35 +840,15 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;2332=0/0:1280x720:0;2377=0/0:1280x720:100</property>
-   <property name="luma_invert">0</property>
-   <property name="operator">over</property>
-   <property name="softness">0</property>
-  </transition>
-  <transition in="8972" out="9428" id="transition7">
-   <property name="a_track">3</property>
-   <property name="b_track">5</property>
-   <property name="start">0/0:100%x100%</property>
-   <property name="factory">loader</property>
-   <property name="aligned">1</property>
-   <property name="progressive">1</property>
-   <property name="mlt_type">transition</property>
-   <property name="mlt_service">composite</property>
-   <property name="automatic">1</property>
-   <property name="kdenlive_id">composite</property>
-   <property name="force_track">1</property>
-   <property name="deinterlace">0</property>
-   <property name="distort">0</property>
-   <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;409=0/0:1280x720:0;456=0/0:1280x720:100</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;650=0/0:1280x720:0;686=0/0:1280x720:100</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
    <property name="luma"/>
   </transition>
-  <transition in="9694" out="11641" id="transition8">
+  <transition in="14517" out="14931" id="transition21">
    <property name="a_track">3</property>
-   <property name="b_track">5</property>
+   <property name="b_track">4</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -331,15 +861,15 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1890=0/0:1280x720:0;1947=0/0:1280x720:100</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;368=0/0:1280x720:0;414=0/0:1280x720:100</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
    <property name="luma"/>
   </transition>
-  <transition in="12102" out="13172" id="transition9">
+  <transition in="15697" out="19701" id="transition22">
    <property name="a_track">3</property>
-   <property name="b_track">5</property>
+   <property name="b_track">4</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -352,15 +882,15 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1035=0/0:1280x720:0;1070=0/0:1280x720:100</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;3944=0/0:1280x720:0;4004=0/0:1280x720:100</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
    <property name="luma"/>
   </transition>
-  <transition in="13602" out="14672" id="transition10">
+  <transition in="20002" out="22414" id="transition23">
    <property name="a_track">3</property>
-   <property name="b_track">5</property>
+   <property name="b_track">4</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -373,14 +903,287 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1035=0/0:1280x720:0;1070=0/0:1280x720:100</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;2344=0/0:1280x720:0;2412=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="22766" out="24023" id="transition24">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;1197=0/0:1280x720:0;1257=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="24384" out="27121" id="transition25">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;44=0/0:1280x720:0;2673=0/0:1280x720:0;2737=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="28274" out="28809" id="transition26">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;69=0/0:1280x720:0;477=0/0:1280x720:0;535=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="31458" out="32402" id="transition27">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;63=0/0:1280x720:0;898=0/0:1280x720:0;944=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="32826" out="34438" id="transition28">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;63=0/0:1280x720:0;1555=0/0:1280x720:0;1612=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="35713" out="36379" id="transition29">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;63=0/0:1280x720:0;606=0/0:1280x720:0;666=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="37677" out="38481" id="transition30">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;742=0/0:1280x720:0;804=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="38816" out="44118" id="transition31">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;5242=0/0:1280x720:0;5302=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="44374" out="44714" id="transition32">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;280=0/0:1280x720:0;340=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="46077" out="48500" id="transition33">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;2355=0/0:1280x720:0;2423=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="48834" out="49220" id="transition34">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;336=0/0:1280x720:0;386=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="52802" out="59312" id="transition35">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;6450=0/0:1280x720:0;6510=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="61788" out="68298" id="transition36">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">1</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;60=0/0:1280x720:0;6450=0/0:1280x720:0;6510=0/0:1280x720:100</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
   </transition>
-  <transition in="305" out="360" id="transition11">
+  <transition in="22778" out="23382" id="transition37">
    <property name="a_track">3</property>
-   <property name="b_track">5</property>
+   <property name="b_track">6</property>
    <property name="start">0/0:100%x100%</property>
    <property name="factory">loader</property>
    <property name="aligned">1</property>
@@ -393,7 +1196,7 @@
    <property name="deinterlace">0</property>
    <property name="distort">0</property>
    <property name="fill">1</property>
-   <property name="geometry">0/0:1280x720:0;55=0/0:1280x720:100</property>
+   <property name="geometry">0/0:1280x720:0;255=0/0:1280x720:0;281=0/0:1280x720:100;556=0/0:1280x720:100;604=0/0:1280x720:0</property>
    <property name="luma_invert">0</property>
    <property name="operator">over</property>
    <property name="softness">0</property>
@@ -402,7 +1205,7 @@
  </tractor>
  <kdenlivedoc profile="atsc_720p_30" kdenliveversion="0.9.10" version="0.88" projectfolder="/home/pablitar/kdenlive">
   <customeffects/>
-  <documentproperties proxyimageminsize="2000" zonein="0" enableproxy="0" zoneout="100" generateproxy="0" zoom="7" verticalzoom="1" proxyextension="ts" position="1243" documentid="1417371032817" generateimageproxy="0" proxyminsize="1000" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -ar 48000 -vcodec mpeg2video -g 5 -deinterlace -s 640x360 -vb 700k"/>
+  <documentproperties proxyimageminsize="2000" zonein="0" enableproxy="0" zoneout="100" generateproxy="0" zoom="9" verticalzoom="1" proxyextension="ts" position="61890" documentid="1417371032817" generateimageproxy="0" proxyminsize="1000" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -ar 48000 -vcodec mpeg2video -g 5 -deinterlace -s 640x360 -vb 700k"/>
   <documentmetadata/>
   <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
@@ -413,8 +1216,10 @@ p, li { white-space: pre-wrap; }
   <tracksinfo>
    <trackinfo blind="1" mute="0" locked="0" trackname="Audio 2" type="audio"/>
    <trackinfo blind="1" mute="0" locked="0" trackname="Audio 1" type="audio"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 5"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 4"/>
    <trackinfo blind="0" mute="0" locked="0" trackname="Video 3"/>
-   <trackinfo blind="0" mute="0" locked="0" trackname="Video 2"/>
+   <trackinfo blind="0" mute="1" locked="0" trackname="Video 2"/>
    <trackinfo blind="0" mute="0" locked="0" trackname="Video 1"/>
   </tracksinfo>
   <kdenlive_producer audio_max="56" id="1" pix_fmt="yuv420p" default_video="0" fps="29.97" analysisdata="" name="04 - Pilas.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/04 - Pilas.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="82222" file_hash="74929c76b9fb5b759386b9810f525597" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="2097329892">
@@ -435,7 +1240,7 @@ p, li { white-space: pre-wrap; }
    <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
    <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
   </kdenlive_producer>
-  <kdenlive_producer audio_max="55" id="4" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04217.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/MAH04217.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="964" file_hash="f5671a977cbaec1a3963e1f3faa04b88" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="24716993">
+  <kdenlive_producer audio_max="55" id="4" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04217.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/MAH04217.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="965" file_hash="f5671a977cbaec1a3963e1f3faa04b88" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="24716993">
    <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-28 14:09:14</metaproperty>
    <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
    <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-28 14:09:14</metaproperty>
@@ -453,7 +1258,7 @@ p, li { white-space: pre-wrap; }
    <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
    <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
   </kdenlive_producer>
-  <kdenlive_producer audio_max="54" id="6" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04219.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/MAH04219.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="604" file_hash="add8078cbd699847174fef2d136a5161" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="15508264">
+  <kdenlive_producer audio_max="54" id="6" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04219.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/MAH04219.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="605" file_hash="add8078cbd699847174fef2d136a5161" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="15508264">
    <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-28 14:19:35</metaproperty>
    <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
    <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-28 14:19:35</metaproperty>
@@ -525,17 +1330,20 @@ p, li { white-space: pre-wrap; }
    <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
    <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
   </kdenlive_producer>
-  <kdenlive_producer audio_max="63" audiocodec="Vorbis" channels="2" duration="83469" frame_size="1280x720" frequency="44100" analysisdata="" file_size="39946832" aspect_ratio="0" file_hash="cc1c9c7ba183c6b10306b46f5789ed9d" type="1" id="14" name="Pilas.ogg" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/Pilas.ogg">
+  <kdenlive_producer audio_max="63" audiocodec="Vorbis" channels="2" duration="83470" frame_size="1280x720" frequency="44100" analysisdata="" file_size="39946832" aspect_ratio="0" file_hash="cc1c9c7ba183c6b10306b46f5789ed9d" type="1" id="14" name="Pilas.ogg" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/Pilas.ogg">
    <metaproperty tool="" name="meta.attr.0.stream.ARTIST">Wisit</metaproperty>
    <metaproperty tool="" name="meta.attr.0.stream.DATE">2014</metaproperty>
   </kdenlive_producer>
-  <kdenlive_producer audio_max="46" id="15" pix_fmt="yuv420p" default_video="1" fps="59.8333" analysisdata="" name="Pilas_screen.mp4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/Pilas_screen.mp4" default_audio="0" audiocodec="AAC (Advanced Audio Coding)" duration="82520" file_hash="52e82754f7bc6a44260436dee27e69fd" aspect_ratio="1" channels="2" frequency="48000" video_max="1" progressive="1" type="3" frame_size="1280x720" file_size="735184131">
+  <kdenlive_producer audio_max="0" id="15" pix_fmt="yuv420p" default_video="1" fps="59.8333" analysisdata="" name="Pilas_screen.mp4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/Pilas_screen.mp4" default_audio="0" audiocodec="AAC (Advanced Audio Coding)" duration="82467" file_hash="52e82754f7bc6a44260436dee27e69fd" aspect_ratio="1" channels="2" frequency="48000" video_max="1" progressive="1" type="3" frame_size="1280x720" file_size="735184131">
    <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
    <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
    <metaproperty tool="" name="meta.attr.compatible_brands">qt  </metaproperty>
    <metaproperty tool="" name="meta.attr.major_brand">isom</metaproperty>
    <metaproperty tool="" name="meta.attr.minor_version">512</metaproperty>
   </kdenlive_producer>
+  <kdenlive_producer duration="150" frame_size="960x540" in="0" analysisdata="" file_size="217055" aspect_ratio="1" out="149" file_hash="f18dc8f69fb5e2ff85bee4947dbaeb58" type="5" id="16" name="videoTitle.png" resource="/media/pablitar/Datos/WISIT2014/04 - Pilas/videoTitle.png"/>
+  <kdenlive_producer duration="150" frame_size="1920x1080" thumbnail="100" in="0" analysisdata="" file_size="39754" aspect_ratio="1" out="149" file_hash="1fa2098408fbdb6179f6aedcad954c3b" type="5" id="17" name="logo-uqbar-semitransparente.png" resource="/media/pablitar/Datos/WISIT2014/Sobre Impresos/logo-uqbar-semitransparente.png"/>
+  <kdenlive_producer duration="150" frame_size="1920x1080" in="0" analysisdata="" file_size="31062" aspect_ratio="1" out="149" file_hash="5a3edde5bb4317652cbec0c63d11beec" type="5" id="18" name="04 - Pilas.png" resource="/media/pablitar/Datos/WISIT2014/Sobre Impresos/04 - Pilas.png"/>
   <markers/>
   <groups/>
  </kdenlivedoc>

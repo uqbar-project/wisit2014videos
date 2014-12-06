@@ -15,7 +15,10 @@
    id="svg9694"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="videoTitle.svg">
+   sodipodi:docname="videoTitle.svg"
+   inkscape:export-filename="/media/pablitar/Datos/WISIT2014/04 - Pilas/videoTitle.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
   <defs
      id="defs9696">
     <linearGradient
@@ -199,8 +202,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.43323294"
-     inkscape:cx="1033.1777"
-     inkscape:cy="375.33553"
+     inkscape:cx="1338.2344"
+     inkscape:cy="420.61333"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -212,8 +215,8 @@
      inkscape:snap-center="true"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-to-guides="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1030"
+     inkscape:window-width="1600"
+     inkscape:window-height="850"
      inkscape:window-x="-8"
      inkscape:window-y="26"
      inkscape:window-maximized="1">
@@ -246,6 +249,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
