@@ -1506,7 +1506,7 @@
  </tractor>
  <kdenlivedoc profile="atsc_720p_30" kdenliveversion="0.9.10" version="0.88" projectfolder="/home/pablitar/kdenlive">
   <customeffects/>
-  <documentproperties proxyimageminsize="2000" zonein="0" enableproxy="0" zoneout="100" generateproxy="0" zoom="12" verticalzoom="1" proxyextension="ts" position="81917" documentid="1417371032817" generateimageproxy="0" proxyminsize="1000" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -ar 48000 -vcodec mpeg2video -g 5 -deinterlace -s 640x360 -vb 700k"/>
+  <documentproperties documentid="1417371032817" renderaudiobitrate="160" renderdestination="" renderrescalewidth="320" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="H.264/AAC High Profile" renderrescaleheight="240" zonein="0" renderrescale="0" renderscanning="0" renderurl="/media/pablitar/Datos/WISIT2014/04 - Pilas/pilas_render.mp4" rendertwopass="0" renderplay="0" position="81917" proxyminsize="1000" renderstartguide="-1" zoom="12" rendercategory="MP4" renderratio="0" zoneout="100" renderbitrate="20" renderzone="0" renderendguide="-1" renderexportaudio="0" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -ar 48000 -vcodec mpeg2video -g 5 -deinterlace -s 640x360 -vb 700k" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
   <documentmetadata/>
   <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 &lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
