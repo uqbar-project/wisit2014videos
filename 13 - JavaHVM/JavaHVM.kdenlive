@@ -1,0 +1,1379 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt title="Anonymous Submission" version="0.9.3" root="/home/pablitar" LC_NUMERIC="en_US.UTF-8">
+ <profile width="1280" display_aspect_den="9" colorspace="709" frame_rate_den="1" description="HD 720p 30 fps" height="720" display_aspect_num="16" frame_rate_num="30" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
+ <producer in="0" out="85539" id="black">
+  <property name="mlt_type">producer</property>
+  <property name="length">85540</property>
+  <property name="eof">pause</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">0</property>
+  <property name="mlt_service">colour</property>
+ </producer>
+ <playlist id="black_track">
+  <entry in="0" out="81781" producer="black"/>
+ </playlist>
+ <playlist id="playlist1"/>
+ <producer in="0" out="81889" id="3_5">
+  <property name="mlt_type">producer</property>
+  <property name="length">81890</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/JavaHVM.ogg</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">44100</property>
+  <property name="meta.media.0.codec.channels">2</property>
+  <property name="meta.media.0.codec.name">vorbis</property>
+  <property name="meta.media.0.codec.long_name">Vorbis</property>
+  <property name="meta.media.0.codec.bit_rate">96000</property>
+  <property name="meta.attr.0.stream.ALBUM.markup">WISIT2014</property>
+  <property name="meta.attr.0.stream.ARTIST.markup">WISIT</property>
+  <property name="meta.attr.0.stream.DATE.markup">2014</property>
+  <property name="meta.attr.0.stream.TITLE.markup">JavaHVM</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="mlt_service">avformat</property>
+ </producer>
+ <playlist id="playlist2">
+  <blank length="130"/>
+  <entry in="0" out="81339" producer="3_5">
+   <filter out="75" id="fadein">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+   <filter in="81264" out="81339" id="fadeout">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">2</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+  </entry>
+ </playlist>
+ <producer in="0" out="74179" id="4">
+  <property name="mlt_type">producer</property>
+  <property name="length">74180</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/JavaHVM_screen.mp4</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">59.8333</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1024</property>
+  <property name="meta.media.0.codec.height">768</property>
+  <property name="meta.media.0.codec.frame_rate">60</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">622354</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">isom</property>
+  <property name="meta.attr.minor_version.markup">512</property>
+  <property name="meta.attr.compatible_brands.markup">qt  </property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">359</property>
+  <property name="meta.media.frame_rate_den">6</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1024</property>
+  <property name="meta.media.height">768</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <playlist id="playlist3">
+  <blank length="383"/>
+  <entry in="0" out="3242" producer="4"/>
+  <entry in="0" out="2872" producer="4"/>
+  <blank length="1108"/>
+  <entry in="249" out="74179" producer="4"/>
+ </playlist>
+ <producer in="0" out="81395" id="2_3">
+  <property name="mlt_type">producer</property>
+  <property name="length">81396</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/13 - JavaHVM.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">29.97</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">29.97</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.color_trc">11</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">5991062</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 12:47:19</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127964</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 12:47:19</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">22675568</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 12:47:19</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">30000</property>
+  <property name="meta.media.frame_rate_den">1001</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">11</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <playlist id="playlist4">
+  <blank length="383"/>
+  <entry in="0" out="81081" producer="2_3">
+   <filter out="80614" id="volume">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="gain">0</property>
+    <property name="end">0</property>
+   </filter>
+   <filter in="80614" out="80702" id="filter0">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="gain">0</property>
+    <property name="end">0.75</property>
+   </filter>
+   <filter in="80702" out="80783" id="filter1">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="gain">0.75</property>
+    <property name="end">0.62</property>
+   </filter>
+   <filter in="80783" out="80895" id="filter2">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="gain">0.62</property>
+    <property name="end">0</property>
+   </filter>
+   <filter in="80895" out="81081" id="filter3">
+    <property name="track">0</property>
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="tag">volume</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="kdenlive_info"/>
+    <property name="gain">0</property>
+    <property name="end">0</property>
+   </filter>
+   <filter in="81036" out="81081" id="fade_to_black">
+    <property name="track">0</property>
+    <property name="start">1</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_to_black</property>
+    <property name="tag">brightness</property>
+    <property name="kdenlive_ix">2</property>
+    <property name="end">0</property>
+    <property name="kdenlive_info"/>
+   </filter>
+  </entry>
+ </playlist>
+ <producer in="0" out="81395" id="19">
+  <property name="mlt_type">producer</property>
+  <property name="length">81396</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/Sobre Impresos/logo-uqbar-semitransparente.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <playlist id="playlist5">
+  <blank length="383"/>
+  <entry in="0" out="81081" producer="19">
+   <filter in="81036" out="81081" id="filter4">
+    <property name="track">0</property>
+    <property name="start">1</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_to_black</property>
+    <property name="tag">brightness</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="end">0</property>
+    <property name="kdenlive_info"/>
+   </filter>
+  </entry>
+ </playlist>
+ <producer in="0" out="276" id="17">
+  <property name="mlt_type">producer</property>
+  <property name="length">277</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/13 - JavaHVM_gassman.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <producer in="0" out="1713" id="5_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">1714</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04308.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6007119</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 09:51:04</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127764</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 09:51:04</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 09:51:04</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="993" id="6_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">994</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04309.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6016587</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 09:57:26</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127611</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 09:57:26</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 09:57:26</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="1324" id="7_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">1325</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04310.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6010381</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 09:58:22</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127702</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 09:58:22</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 09:58:22</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="733" id="8_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">734</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04311.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6017112</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:02:14</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127431</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:02:14</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:02:14</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="1194" id="9_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">1195</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04312.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6017431</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:09:27</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">128033</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:09:27</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:09:27</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="489" id="10_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">490</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04313.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6016926</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:12:32</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127262</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:12:32</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:12:32</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="1439" id="12_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">1440</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04316.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6007194</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:16:47</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127731</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:16:47</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:16:47</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="604" id="13_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">605</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04317.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6020715</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:22:06</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127387</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:22:06</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:22:06</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="762" id="14_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">763</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04318.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6018063</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:23:39</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127517</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:23:39</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:23:39</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="1108" id="15_1">
+  <property name="mlt_type">producer</property>
+  <property name="length">1109</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04319.MP4</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1280</property>
+  <property name="meta.media.0.codec.height">720</property>
+  <property name="meta.media.0.codec.frame_rate">25</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">6010120</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2014-11-29 10:27:32</property>
+  <property name="meta.attr.0.stream.encoder.markup">AVC Coding</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">fltp</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">aac</property>
+  <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.1.codec.bit_rate">127643</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2014-11-29 10:27:32</property>
+  <property name="meta.attr.major_brand.markup">MSNV</property>
+  <property name="meta.attr.minor_version.markup">19595376</property>
+  <property name="meta.attr.compatible_brands.markup">MSNVmp42isom</property>
+  <property name="meta.attr.creation_time.markup">2014-11-29 10:27:32</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">720</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <playlist id="playlist0">
+  <blank length="462"/>
+  <entry in="0" out="276" producer="17"/>
+  <blank length="4551"/>
+  <entry in="0" out="1713" producer="5_1"/>
+  <blank length="9725"/>
+  <entry in="0" out="993" producer="6_1"/>
+  <blank length="708"/>
+  <entry in="0" out="1324" producer="7_1"/>
+  <blank length="5622"/>
+  <entry in="0" out="733" producer="8_1"/>
+  <blank length="12242"/>
+  <entry in="0" out="1194" producer="9_1"/>
+  <blank length="4367"/>
+  <entry in="0" out="489" producer="10_1"/>
+  <blank length="7159"/>
+  <entry in="0" out="1439" producer="12_1"/>
+  <blank length="8133"/>
+  <entry in="0" out="604" producer="13_1"/>
+  <blank length="2169"/>
+  <entry in="0" out="762" producer="14_1"/>
+  <blank length="6258"/>
+  <entry in="0" out="1108" producer="15_1"/>
+ </playlist>
+ <producer in="0" out="444" id="18">
+  <property name="mlt_type">producer</property>
+  <property name="length">445</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/13 - JavaHVM/JavaHVM_title.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <producer in="0" out="467" id="20">
+  <property name="mlt_type">producer</property>
+  <property name="length">468</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/pablitar/Datos/WISIT2014/Sobre Impresos/00 - Intro - Final.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">6400</property>
+  <property name="meta.media.height">3600</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <playlist id="playlist6">
+  <entry in="0" out="444" producer="18"/>
+  <blank length="81019"/>
+  <entry in="0" out="317" producer="20">
+   <filter out="45" id="fade_from_black">
+    <property name="track">0</property>
+    <property name="start">0</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_from_black</property>
+    <property name="tag">brightness</property>
+    <property name="kdenlive_ix">1</property>
+    <property name="end">1</property>
+    <property name="kdenlive_info"/>
+   </filter>
+   <filter in="272" out="317" id="filter5">
+    <property name="track">0</property>
+    <property name="start">1</property>
+    <property name="mlt_type">filter</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_to_black</property>
+    <property name="tag">brightness</property>
+    <property name="kdenlive_ix">2</property>
+    <property name="end">0</property>
+    <property name="kdenlive_info"/>
+   </filter>
+  </entry>
+ </playlist>
+ <tractor title="Anonymous Submission" global_feed="1" in="0" out="81781" id="maintractor">
+  <property name="meta.volume">1</property>
+  <track producer="black_track"/>
+  <track hide="video" producer="playlist1"/>
+  <track hide="video" producer="playlist2"/>
+  <track producer="playlist3"/>
+  <track producer="playlist4"/>
+  <track producer="playlist5"/>
+  <track hide="audio" producer="playlist0"/>
+  <track producer="playlist6"/>
+  <transition id="transition0">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition1">
+   <property name="a_track">1</property>
+   <property name="b_track">3</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition2">
+   <property name="a_track">1</property>
+   <property name="b_track">4</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">1</property>
+   <property name="b_track">5</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition4">
+   <property name="a_track">1</property>
+   <property name="b_track">6</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="internal_added">237</property>
+   <property name="combine">1</property>
+  </transition>
+  <transition id="transition5">
+   <property name="a_track">1</property>
+   <property name="b_track">7</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="internal_added">237</property>
+   <property name="combine">1</property>
+  </transition>
+  <transition in="462" out="738" id="transition6">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;30=0/0:1280x720:100;246=0/0:1280x720:100;276=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="5290" out="7003" id="transition7">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;30=0/0:1280x720:100;702=0/0:1280x720:100;732=0/0:1280x720:0;1236=0/0:1280x720:0;1266=0/0:1280x720:100;1683=0/0:1280x720:100;1713=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="16729" out="17722" id="transition8">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;30=0/0:1280x720:100;963=0/0:1280x720:100;993=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="18431" out="19755" id="transition9">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;1294=0/0:1280x720:100;1324=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="25378" out="26111" id="transition10">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;703=0/0:1280x720:100;733=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="38354" out="39548" id="transition11">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;120=0/0:1280x720:0;121=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="43916" out="44405" id="transition12">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;30=0/0:1280x720:100;459=0/0:1280x720:100;489=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="51565" out="53004" id="transition13">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;30=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="61138" out="61742" id="transition14">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0%/0%:100%x100%:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+  </transition>
+  <transition in="63912" out="64674" id="transition15">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:0;30=0/0:1280x720:100;732=0/0:1280x720:100;762=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="70933" out="72041" id="transition16">
+   <property name="a_track">5</property>
+   <property name="b_track">6</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;747=0/0:1280x720:100;777=0/0:1280x720:0</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="427" out="82142" id="transition17">
+   <property name="a_track">4</property>
+   <property name="b_track">5</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0%/0%:100%x100%:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+  </transition>
+  <transition in="383" out="81464" id="transition18">
+   <property name="a_track">4</property>
+   <property name="b_track">5</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0%/0%:100%x100%:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+  <transition in="383" out="444" id="transition19">
+   <property name="a_track">4</property>
+   <property name="b_track">7</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition in="383" out="81464" id="transition20">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="start">0/0:100%x100%</property>
+   <property name="factory">loader</property>
+   <property name="aligned">1</property>
+   <property name="progressive">1</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">composite</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">composite</property>
+   <property name="force_track">0</property>
+   <property name="deinterlace">0</property>
+   <property name="distort">0</property>
+   <property name="fill">1</property>
+   <property name="geometry">0/0:1280x720:100;1488=0/0:1280x720:100;1548=0/0:1280x720:0;2148=0/0:1280x720:0;2208=0/0:1280x720:100;7168=0/0:1280x720:100;7228=0/0:1280x720:0;7618=0/0:1280x720:0;7678=0/0:1280x720:100;9053=0/0:1280x720:100;9113=0/0:1280x720:0;9563=0/0:1280x720:0;9623=0/0:1280x720:100;11245=0/0:1280x720:100;11305=0/0:1280x720:0;11365=0/0:1280x720:0;11425=0/0:1280x720:100;12357=0/0:1280x720:100;12417=0/0:1280x720:0;12987=0/0:1280x720:0;13047=0/0:1280x720:100;16594=0/0:1280x720:100;16654=0/0:1280x720:0;16962=0/0:1280x720:0;17022=0/0:1280x720:100;17646=0/0:1280x720:100;17706=0/0:1280x720:0;18066=0/0:1280x720:0;18126=0/0:1280x720:100;18466=0/0:1280x720:100;18526=0/0:1280x720:0;18826=0/0:1280x720:0;18886=0/0:1280x720:100;19815=0/0:1280x720:100;19875=0/0:1280x720:0;20235=0/0:1280x720:0;20295=0/0:1280x720:100;21412=0/0:1280x720:100;21472=0/0:1280x720:0;21832=0/0:1280x720:0;21892=0/0:1280x720:100;22833=0/0:1280x720:100;22893=0/0:1280x720:0;23433=0/0:1280x720:0;23463=0/0:1280x720:100;23883=0/0:1280x720:100;23943=0/0:1280x720:0;24303=0/0:1280x720:0;24363=0/0:1280x720:100;24921=0/0:1280x720:100;24981=0/0:1280x720:0;25371=0/0:1280x720:0;25431=0/0:1280x720:100;26341=0/0:1280x720:100;26401=0/0:1280x720:0;26701=0/0:1280x720:0;26761=0/0:1280x720:100;28095=0/0:1280x720:100;28155=0/0:1280x720:0;31663=0/0:1280x720:0;31723=0/0:1280x720:100;33050=0/0:1280x720:100;33110=0/0:1280x720:0;33410=0/0:1280x720:0;33470=0/0:1280x720:100;34063=0/0:1280x720:100;34123=0/0:1280x720:0;34513=0/0:1280x720:0;34573=0/0:1280x720:100;37950=0/0:1280x720:100;38010=0/0:1280x720:0;38400=0/0:1280x720:0;38460=0/0:1280x720:100;38990=0/0:1280x720:100;39050=0/0:1280x720:0;39612=0/0:1280x720:0;39672=0/0:1280x720:100;41732=0/0:1280x720:100;41792=0/0:1280x720:0;42452=0/0:1280x720:0;42512=0/0:1280x720:100;45216=0/0:1280x720:100;45276=0/0:1280x720:0;48926=0/0:1280x720:0;48986=0/0:1280x720:100;49646=0/0:1280x720:100;49706=0/0:1280x720:0;50221=0/0:1280x720:0;50281=0/0:1280x720:100;51821=0/0:1280x720:100;51881=0/0:1280x720:0;52181=0/0:1280x720:0;52241=0/0:1280x720:100;52571=0/0:1280x720:100;52616=0/0:1280x720:0;53066=0/0:1280x720:0;53126=0/0:1280x720:100;55345=0/0:1280x720:100;55405=0/0:1280x720:0;56555=0/0:1280x720:0;56615=0/0:1280x720:100;57508=0/0:1280x720:100;57568=0/0:1280x720:0;57958=0/0:1280x720:0;58018=0/0:1280x720:100;58318=0/0:1280x720:100;58378=0/0:1280x720:0;60753=0/0:1280x720:0;60813=0/0:1280x720:100;61299=0/0:1280x720:100;61359=0/0:1280x720:0;61599=0/0:1280x720:0;61659=0/0:1280x720:100;62545=0/0:1280x720:100;62605=0/0:1280x720:0;63025=0/0:1280x720:0;63085=0/0:1280x720:100;64658=0/0:1280x720:100;64718=0/0:1280x720:0;65018=0/0:1280x720:0;65078=0/0:1280x720:100;65737=0/0:1280x720:100;65797=0/0:1280x720:0;66287=0/0:1280x720:0;66347=0/0:1280x720:100;67235=0/0:1280x720:100;67295=0/0:1280x720:0;68228=0/0:1280x720:0;68288=0/0:1280x720:100;69215=0/0:1280x720:100;69275=0/0:1280x720:0;69575=0/0:1280x720:0;69635=0/0:1280x720:100;70485=0/0:1280x720:100;70545=0/0:1280x720:0;70845=0/0:1280x720:0;70905=0/0:1280x720:100;72037=0/0:1280x720:100;72097=0/0:1280x720:0;72397=0/0:1280x720:0;72457=0/0:1280x720:100;73341=0/0:1280x720:100;73401=0/0:1280x720:0;73551=0/0:1280x720:0;73611=0/0:1280x720:100</property>
+   <property name="luma_invert">0</property>
+   <property name="operator">over</property>
+   <property name="softness">0</property>
+   <property name="luma"/>
+  </transition>
+ </tractor>
+ <kdenlivedoc profile="atsc_720p_30" kdenliveversion="0.9.10" version="0.88" projectfolder="/home/pablitar/kdenlive">
+  <customeffects/>
+  <documentproperties documentid="1418224485144" renderaudiobitrate="160" renderdestination="" renderrescalewidth="320" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="H.264/AAC High Profile" renderrescaleheight="240" zonein="0" renderrescale="0" renderscanning="0" renderurl="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/13 - JavaHVM_render.MP4" rendertwopass="0" renderplay="0" position="81781" proxyminsize="1000" renderstartguide="-1" zoom="7" rendercategory="MP4" renderratio="0" zoneout="100" renderbitrate="20" renderzone="0" renderendguide="-1" renderexportaudio="0" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -vcodec mpeg2video -g 5 -s 640x480 -qscale 7" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
+  <documentmetadata/>
+  <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>&lt;/body>&lt;/html></documentnotes>
+  <profileinfo width="1280" display_aspect_den="9" frame_rate_den="1" description="HD 720p 30 fps" height="720" frame_rate_num="30" display_aspect_num="16" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
+  <tracksinfo>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Audio 2" type="audio"/>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Audio 1" type="audio"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 5"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 4"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 3"/>
+   <trackinfo blind="0" mute="1" locked="0" trackname="Video 2"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 1"/>
+  </tracksinfo>
+  <kdenlive_producer audio_max="52" id="1" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04321.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04321.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="533" file_hash="9b060c9e5c1ab7f1103e28bffc6491ba" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="13695302">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 11:24:19</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 11:24:19</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 11:24:19</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="55" id="2" pix_fmt="yuv420p" default_video="0" fps="29.97" analysisdata="" name="13 - JavaHVM.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/13 - JavaHVM.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="81396" file_hash="e6867292aa3bc8491ee56ec832a9776e" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="2076225503">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 12:47:19</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 12:47:19</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 12:47:19</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">22675568</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="57" audiocodec="Vorbis" channels="2" duration="81890" frame_size="1280x720" frequency="44100" analysisdata="" file_size="22370187" aspect_ratio="0" file_hash="8469e21c77034d876c868ca47823a831" type="1" id="3" name="JavaHVM.ogg" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/JavaHVM.ogg">
+   <metaproperty tool="" name="meta.attr.0.stream.ALBUM">WISIT2014</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.ARTIST">WISIT</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.DATE">2014</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.TITLE">JavaHVM</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="0" id="4" pix_fmt="yuv420p" default_video="0" fps="59.8333" analysisdata="" name="JavaHVM_screen.mp4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/JavaHVM_screen.mp4" default_audio="-1" duration="74180" file_hash="94f1680716178812128ce036377ae1da" aspect_ratio="1" video_max="0" progressive="1" type="2" frame_size="1024x768" file_size="193629018">
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">512</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="55" id="5" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04308.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04308.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="1714" file_hash="ce3e10ad2bbd6ab19d0af7ea527ed214" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="43823589">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 09:51:04</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 09:51:04</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 09:51:04</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="56" id="6" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04309.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04309.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="994" file_hash="076d2b81fcce7fb7169db1f26201c369" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="25449503">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 09:57:26</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 09:57:26</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 09:57:26</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="52" id="7" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04310.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04310.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="1325" file_hash="ba538e3a251dffb88b9ff9a5df18003a" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="33898597">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 09:58:22</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 09:58:22</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 09:58:22</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="53" id="8" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04311.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04311.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="734" file_hash="075734f1394aff932c743618cfe383fd" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="18811945">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:02:14</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:02:14</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:02:14</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="56" id="9" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04312.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04312.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="1195" file_hash="947d4a35ebafd717189e9253977a1606" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="30619176">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:09:27</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:09:27</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:09:27</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="52" id="10" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04313.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04313.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="490" file_hash="c8f2f71f39fd52c1628191b77ad0d3e2" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="12541238">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:12:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:12:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:12:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="50" id="11" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04315.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04315.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="187" file_hash="c46cb1cd986b040ad133e24bae131f63" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="4863777">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:16:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:16:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:16:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="56" id="12" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04316.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04316.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="1440" file_hash="dc2893f4882b1eb14ac6c309a58f328c" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="36827204">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:16:47</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:16:47</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:16:47</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="50" id="13" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04317.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04317.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="605" file_hash="6f3c892bf6fd6c79a4d9bfdb7f4d3303" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="15501591">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:22:06</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:22:06</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:22:06</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="52" id="14" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04318.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04318.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="763" file_hash="9e1b4d5d8207603da8789266536d2194" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="19552907">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:23:39</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:23:39</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:23:39</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="53" id="15" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04319.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04319.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="1109" file_hash="b9da20f299f8b4c4f2230394f3280893" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="28370270">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 10:27:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 10:27:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 10:27:32</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="51" id="16" pix_fmt="yuv420p" default_video="0" fps="25" analysisdata="" name="MAH04320.MP4" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/MAH04320.MP4" default_audio="1" audiocodec="AAC (Advanced Audio Coding)" duration="274" file_hash="c5039d28f8a9ff7990d9eff89e3da24e" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1280x720" file_size="7088917">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2014-11-29 11:23:58</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.encoder">AVC Coding</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2014-11-29 11:23:58</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">MSNVmp42isom</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2014-11-29 11:23:58</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">MSNV</metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">19595376</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="150" frame_size="1920x1080" in="0" analysisdata="" file_size="53428" aspect_ratio="1" out="149" file_hash="8124eebdfb3bd07eb91a2b024b02d724" type="5" id="17" name="13 - JavaHVM_gassman.png" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/13 - JavaHVM_gassman.png"/>
+  <kdenlive_producer duration="150" frame_size="1920x1080" in="0" analysisdata="" file_size="520551" aspect_ratio="1" out="149" file_hash="01c72f6418c1fbdaa85887fef2a2888f" type="5" id="18" name="JavaHVM_title.png" resource="/media/pablitar/Datos/WISIT2014/13 - JavaHVM/JavaHVM_title.png"/>
+  <kdenlive_producer duration="150" frame_size="1920x1080" thumbnail="100" in="0" analysisdata="" file_size="39754" aspect_ratio="1" out="149" file_hash="1fa2098408fbdb6179f6aedcad954c3b" type="5" id="19" name="logo-uqbar-semitransparente.png" resource="/media/pablitar/Datos/WISIT2014/Sobre Impresos/logo-uqbar-semitransparente.png"/>
+  <kdenlive_producer duration="150" frame_size="6400x3600" in="0" analysisdata="" file_size="1756950" aspect_ratio="1" out="149" file_hash="890760de12818a5a695649a9514923ff" type="5" id="20" name="00 - Intro - Final.png" resource="/media/pablitar/Datos/WISIT2014/Sobre Impresos/00 - Intro - Final.png"/>
+  <markers/>
+  <groups/>
+ </kdenlivedoc>
+</mlt>
